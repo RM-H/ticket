@@ -16,7 +16,8 @@ const NavbarSearch = () => {
 
     return (
         <>
-            <div className="field has-addons my-auto borderrad1 " style={{marginLeft: '20px'}}>
+            {/*responsive to not show on mobile*/}
+            <div className="field has-addons my-auto borderrad1  " style={{marginLeft: '1rem'}}>
 
                 <Formik onSubmit={(values) => handleSearch(values)} initialValues={{query: ''}}
                         validationSchema={Yup.object().shape({

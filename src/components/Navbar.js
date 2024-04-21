@@ -44,7 +44,7 @@ const Navbar = (props) => {
     const [mobileOpen, setMobileOpen] = useState(false);
 
     const handleDrawerToggle = () => {
-        setTimeout(()=> setMobileOpen((prevState) => !prevState),300)
+        setTimeout(() => setMobileOpen((prevState) => !prevState), 300)
 
     };
 
@@ -59,12 +59,12 @@ const Navbar = (props) => {
 
     if (status === 'done') {
         user =
-            <button onClick={() => nav('/dashboard')} className='button clrone pinar borderrad1 has-text-weight-bold'>
+            <button onClick={() => nav('/dashboard')} className='button clrone  pinar borderrad1 has-text-weight-bold'>
                 <PersonPin/>{dataneeded.user.name}  </button>
 
     } else {
         user =
-            <button onClick={() => nav('/login')} className='button clrone pinar borderrad1 has-text-weight-bold'>
+            <button onClick={() => nav('/login')} className='button clrone  pinar borderrad1 has-text-weight-bold'>
                 <PersonPin/>ورود / ثبت نام
             </button>
 
@@ -77,21 +77,29 @@ const Navbar = (props) => {
                 nav('/');
                 handleActivePage(0)
             }} className='pinar' variant="h6" sx={{my: 2}}>
-               بیلیتیم
+                بیلیتیم
             </Typography>
 
             <Divider sx={{my: 1}}/>
 
 
+            <List sx={{
+                '& .Mui-selected': {
+                    border: '0.15rem dashed #601FEB',
+                    borderRadius: '0.5rem',
+                    backgroundColor: '#ffffff',
+                    mx: 1,
+                    justifyContent: 'start',
+                    pr: '2rem'
+                }
+            }}>
 
-            <List sx={{'& .Mui-selected': {border: '0.15rem dashed #601FEB' , borderRadius:'0.5rem' , backgroundColor:'#ffffff' , mx:1 , justifyContent:'start' , pr:'2rem'}}}>
-
-                <ListItem onClick={handleDrawerToggle} disablePadding >
-                    <ListItemButton  selected={activePage === 1} onClick={() => {
+                <ListItem onClick={handleDrawerToggle} disablePadding>
+                    <ListItemButton selected={activePage === 1} onClick={() => {
                         nav('/concerts');
                         handleActivePage(1)
                     }}
-                                    sx={{textAlign: 'center' , height:'3rem'}}>
+                                    sx={{textAlign: 'center', height: '3rem'}}>
                         <Typography className='pinar' variant="h6" sx={{my: 2}}>
                             کنسرت ها
                         </Typography>
@@ -103,7 +111,7 @@ const Navbar = (props) => {
                         nav('/conference');
                         handleActivePage(2)
                     }}
-                                    sx={{textAlign: 'center' , height:'3rem'}}>
+                                    sx={{textAlign: 'center', height: '3rem'}}>
                         <Typography className='pinar' variant="h6" sx={{my: 2}}>
                             همایش
                         </Typography>
@@ -114,7 +122,7 @@ const Navbar = (props) => {
                     <ListItemButton selected={activePage === 3} onClick={() => {
                         nav('/theatre');
                         handleActivePage(3)
-                    }} sx={{textAlign: 'center' , height:'3rem'}}>
+                    }} sx={{textAlign: 'center', height: '3rem'}}>
                         <Typography className='pinar' variant="h6" sx={{my: 2}}>
                             تئاتر
                         </Typography>
@@ -124,7 +132,7 @@ const Navbar = (props) => {
                     <ListItemButton selected={activePage === 4} onClick={() => {
                         nav('/live');
                         handleActivePage(4)
-                    }} sx={{textAlign: 'center' , height:'3rem'}}>
+                    }} sx={{textAlign: 'center', height: '3rem'}}>
                         <Typography className='pinar' variant="h6" sx={{my: 2}}>
                             آرشیو ویدیویی
                         </Typography>
@@ -135,7 +143,7 @@ const Navbar = (props) => {
                     <ListItemButton selected={activePage === 5} onClick={() => {
                         nav('/inquiry');
                         handleActivePage(5)
-                    }} sx={{textAlign: 'center' , height:'3rem'}}>
+                    }} sx={{textAlign: 'center', height: '3rem'}}>
                         <Typography className='pinar' variant="h6" sx={{my: 2}}>
                             پیگیری خرید
                         </Typography>
@@ -146,12 +154,26 @@ const Navbar = (props) => {
                     <ListItemButton selected={activePage === 6} onClick={() => {
                         nav('/contact');
                         handleActivePage(6)
-                    }} sx={{textAlign: 'center' , height:'3rem'}}>
+                    }} sx={{textAlign: 'center', height: '3rem'}}>
                         <Typography className='pinar' variant="h6" sx={{my: 2}}>
                             تماس با ما
                         </Typography>
                     </ListItemButton>
                 </ListItem>
+
+
+                <ListItem className='is-hidden-tablet' disablePadding>
+
+                    <ListItemButton  sx={{textAlign: 'center', height: '3rem'}}>
+                        {user}
+                    </ListItemButton>
+
+                </ListItem>
+
+
+
+
+
 
 
             </List>
@@ -184,8 +206,14 @@ const Navbar = (props) => {
                                 keepMounted: true, // Better open performance on mobile.
                             }}
                             sx={{
-                                display: {xs: 'block', sm: 'block' , md:'block'},
-                                '& .MuiDrawer-paper': {boxSizing: 'border-box', width: drawerWidth},
+                                display: {xs: 'block', sm: 'block', md: 'block'},
+                                '& .MuiDrawer-paper': {
+                                    boxSizing: 'border-box',
+                                    width: drawerWidth,
+                                    backgroundColor: 'rgba(255,254,254,0.9)',
+                                    backdropFilter: 'blur(0.3rem)',
+                                    borderLeft: '0.4rem solid #601FEB'
+                                },
                             }}
                         >
                             {drawer}
@@ -194,16 +222,13 @@ const Navbar = (props) => {
 
                     {/*Responsive Drawer*/}
 
-                    <div className='columns m-0 wdith100 navborderbotblack '>
+                    <div className='columns m-0 wdith100 navborderbotblack '
+                         >
 
-                        <div className='is-hidden-desktop has-text-left navpadstart150 navpadend150 '>
-                            {
-                                user
-                            }
-                        </div>
+
 
                         <div
-                            className='column is-12-mobile is-5-desktop  navpadstart150   '>
+                            className='column is-12-mobile is-8-desktop  navpadstart150   ' >
                             <div className='is-flex is-flex-direction-row  yekan'>
                                 <IconButton
                                     color="inherit"
@@ -213,29 +238,41 @@ const Navbar = (props) => {
                                     sx={{ml: 1, display: {lg: 'none'}}}
                                 >
                                     <Menu/>
+                                    {/*responsive logo*/}
+                                    <img className='mr-1' src="/images/headlogo.png" width={40} height={30}  alt=""/>
                                 </IconButton>
-                                
-                                {/*<p className='navbar-item py-0'>*/}
-                                {/*    <img src="/images/logo.png"  width={200} height={50} style={{maxHeight:'55px'}}/>*/}
-                                {/*</p>*/}
+
+
+
+
 
 
                                 <a onClick={() => {
                                     nav('/');
                                     handleActivePage(0)
                                 }}
-                                   className={`navbar-item is-hidden-mobile underline px-0 ${activePage === 0 && 'navactive'}`}
+                                   className={`navbar-item is-hidden-mobile is-hidden-touch underline px-0 ${activePage === 0 && 'navactive'}`}
                                    style={{alignItems: 'center'}}>
                                     <img src="/images/logo.png" width={150} height={50} style={{maxHeight: '55px'}}/>
 
 
                                     {/*بیلیتیم*/}
                                 </a>
-                                <div className='is-hidden-desktop is-flex is-justify-content-flex-end-flex-end pr-3 '>
+                                <div className='is-hidden-desktop  is-flex is-align-items-center is-justify-content-flex-end-flex-end mr-auto ml-0 '>
                                     <NavDropDown/>
                                     <Navsearch/>
 
+
                                 </div>
+
+
+                                {/*responsive*/}
+
+                                <div className='is-hidden-desktop is-hidden-mobile  mr-auto ml-0'>
+                                    {user}
+                                </div>
+
+
 
 
                                 <div className='is-flex is-flex-direction-row is-hidden-touch '>
@@ -306,7 +343,7 @@ const Navbar = (props) => {
 
 
                         <div
-                            className='column is-12-mobile is-7 is-hidden-touch  navpadend150    is-flex   is-justify-content-end  navborderbotblack  '>
+                            className='column is-12-mobile is-4-desktop is-hidden-touch  navpadend150    is-flex   is-justify-content-end  navborderbotblack  '>
                             <div className='yekan flex-JCS-ACS '>
                                 <NavDropDown/>
                                 <Navsearch/>
