@@ -10,7 +10,7 @@ const Topbox = () => {
 
                 <div className='columns mx-0 mt-3 is-multiline   '>
 
-                    <div className='column padtopmobile is-12-mobile is-5-desktop mb-4 blackborder   py-6  navpadstart150 shadowone'>
+                    <div className='column padtopmobile is-12-mobile is-5-desktop mb-4 blackborder   py-6  navpadstart150 shadowtwo'>
 
                         <BoxOne/>
 

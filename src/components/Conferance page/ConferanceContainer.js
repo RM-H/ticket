@@ -72,7 +72,7 @@ const ConferanceContainer = () => {
 
                     <div className='column is-2'>
 
-                        <div className="is-flex is-flex-direction-column is-justify-content-flex-start p-4 borderrad1"
+                        <div className="is-flex is-flex-direction-column is-justify-content-flex-start p-4 borderrad1 shadowtwo"
                              style={{position: 'sticky', border: '0.1618rem solid #601FEB'}}>
                             <h4 className='pinar has-text-weight-bold my-2'>فیلتر براساس شهر</h4>
 
@@ -94,7 +94,7 @@ const ConferanceContainer = () => {
                         </div>
 
                         <div
-                            className="is-flex is-flex-direction-column is-justify-content-flex-start p-4 borderrad1 my-3"
+                            className="is-flex is-flex-direction-column is-justify-content-flex-start p-4 borderrad1 my-3 shadowtwo"
                             style={{position: 'sticky',border: '0.1618rem solid #601FEB'}}>
                             <h4 className='pinar has-text-weight-bold my-2'>فیلتر براساس خواننده</h4>
 

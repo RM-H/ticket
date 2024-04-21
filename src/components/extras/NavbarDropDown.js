@@ -47,7 +47,7 @@ const NavbarDropDown = () => {
         Selectedcity=
             <>
 
-                همه شهر ها       <ArrowDropDown/>
+                همه شهر ها       <ArrowDropDown />
             </>
     }
 
@@ -60,7 +60,7 @@ const NavbarDropDown = () => {
                 <div className="dropdown-trigger">
                     <button onClick={() => setShow(!show)} className="button pinar clrseven has-text-white"
                             aria-haspopup="true" aria-controls="dropdown-menu3" style={{borderRadius:0}}>
-                        <span>{Selectedcity}</span>
+                        <span className='is-flex flex-JCS-ACS'>{Selectedcity}</span>
 
                     </button>
                 </div>

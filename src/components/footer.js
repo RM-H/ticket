@@ -24,7 +24,7 @@ const Footer = () => {
     return (
         <>
             <footer
-                className='clrthree smallwidth is-flex is-flex-direction-column is-justify-content-center is-align-items-center '
+                className='clrthree smallwidth is-flex is-flex-direction-column is-justify-content-center is-align-items-center  '
                 style={{width: '100%', marginTop: '10rem'}}>
                 <div style={{transform: 'translateY(-10rem)'}}>
 
@@ -32,7 +32,7 @@ const Footer = () => {
                     <div className='columns  mx-0  pt-6 navpadend150 navpadstart150 '>
 
 
-                        <div className='column is-12 clrtwo borderrad2'>
+                        <div className='column is-12 clrtwo borderrad2 shadowtwo'>
                             <div className='columns p-4 is-flex '>
 
                                 <div
@@ -49,22 +49,7 @@ const Footer = () => {
                                     </article>
 
 
-                                    <div className='my-3 wdith100  '>
 
-                                        <div className="field has-addons  wdith100 ">
-                                            <div className="control shadowone  " style={{width: '40%'}}>
-                                                <input className="input yekan has-text-right" type="tel"
-                                                       placeholder="شماره موبایل خود را وارد کنید."/>
-                                            </div>
-                                            <div className="control " style={{width: '20%'}}>
-                                                <a href={null} className="button clrone yekan wdith100 pinar ">
-                                                    ثبت شماره
-                                                </a>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
 
 
                                 </div>
@@ -93,11 +78,23 @@ const Footer = () => {
 
                         <div className='column is-12-mobile is-4-desktop'>
                             <h5 className='pinar has-text-weight-bold is-size-5 has-text-white mb-3'>تیکت آنلاین</h5>
-                            <article className='yekan has-text-white is-size-6' style={{textAlign: "justify"}}>
+                            <article className='yekan has-text-white is-size-6 mb-1' style={{textAlign: "justify"}}>
                                 {
                                     status === "done" ? dataneeded.footer_black : '...'
                                 }
                             </article>
+                            <a
+                                target="_blank"
+                                href="https://trustseal.enamad.ir/?id=483768&Code=AkTTB3TQGvPPj0ZfNEUgS6PjG3HYUUZs"
+                            >
+                                <img
+                                    referrerPolicy="origin"
+                                    src="https://trustseal.enamad.ir/Content/Images/Star2/81.png?v=5.0.0.3777"
+                                    alt=""
+                                    style={{ cursor: "pointer" , backgroundColor:'white' , borderRadius:'0.3rem'  }}
+                                    code="AkTTB3TQGvPPj0ZfNEUgS6PjG3HYUUZs"
+                                />
+                            </a>
                         </div>
 
                         <div className='column is-6-mobile is-2-desktop '>

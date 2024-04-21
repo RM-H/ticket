@@ -29,7 +29,7 @@ const TheatreList = ({cityid,singerid}) => {
         const options = {
 
 
-            params: {page: page, take: 4, type: 3, singer_id: singerid, city_id: cityid, search: search}
+            params: {page: page, take: 8, type: 3, singer_id: singerid, city_id: cityid, search: search}
         };
         setLoading(true)
 

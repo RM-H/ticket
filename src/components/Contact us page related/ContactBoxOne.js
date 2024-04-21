@@ -66,7 +66,7 @@ const ContactBoxOne = () => {
         <>
             <div className='column  is-12'>
                 <div className='columns is-multiline m-0'>
-                    <div className='column is-4-desktop is-12-mobile is-12-tablet cardboxborder borderrad2 is-flex is-align-content-center'>
+                    <div className='column is-4-desktop is-12-mobile is-12-tablet cardboxborder shadowtwo borderrad2 is-flex is-align-content-center'>
                         <div className='columns m-0 p-3 is-multiline'>
                             <div className='column is-12'>
 
@@ -143,7 +143,7 @@ const ContactBoxOne = () => {
                     </div>
 
 
-                    <div className='column is-8-desktop is-12-mobile is-12-tablet borderrad2 clrthree p-5'>
+                    <div className='column is-8-desktop is-12-mobile is-12-tablet shadowtwo borderrad2 clrthree p-5'>
 
 
                         <h2 className='pinar is-size-6-mobile is-size-5-desktop has-text-white mt-1'>

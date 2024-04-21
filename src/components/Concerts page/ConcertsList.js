@@ -32,7 +32,7 @@ const ConcertsList = ({cityid, singerid}) => {
         const options = {
 
 
-            params: {page: page, take: 4, type: 1, singer_id: singerid, city_id: cityid, search: search}
+            params: {page: page, take: 8, type: 1, singer_id: singerid, city_id: cityid, search: search}
         };
         setLoading(true)
 
@@ -133,7 +133,7 @@ const ConcertsList = ({cityid, singerid}) => {
                     <div className='column is-12'>
 
 
-                        <div className="field has-addons yekan ">
+                        <div className="field has-addons yekan  ">
                             <div className="control wdith100">
                                 <input className="input"
                                        onChange={(event) => setTimeout(() => setSearch(event.target.value), 1600)}

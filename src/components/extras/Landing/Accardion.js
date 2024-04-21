@@ -1,5 +1,6 @@
 import {Accordion,AccordionSummary,Typography,AccordionDetails,} from '@mui/material'
 
+import {ArrowDownward} from '@mui/icons-material'
 
 
 const Accardion = ({q , a ,id}) => {
@@ -9,9 +10,9 @@ const Accardion = ({q , a ,id}) => {
   return (
       <>
           <div className='column px-0 is-12'>
-              <Accordion  className='cardboxborder py-4'>
+              <Accordion  className='clrtwoborder py-4'>
                   <AccordionSummary
-                      expandIcon={<i className="bi bi-arrow-down is-size-4"></i>}
+                      expandIcon={<ArrowDownward className='clrtwotext' />}
                       aria-controls="panel1a-content"
                       id={ `accard-${id}`}
                   >

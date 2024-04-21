@@ -32,7 +32,7 @@ const ContactMap = () => {
 
 
 
-          <MapContainer ref={mapRef} className='cardboxborder' center={position} zoom={11.6} scrollWheelZoom={false} style={{height:'100%' , borderRadius:'0.9rem'}}>
+          <MapContainer ref={mapRef} className='shadowtwo' center={position} zoom={11.6} scrollWheelZoom={false} style={{height:'100%' , borderRadius:'0.9rem'}}>
               <TileLayer
 
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

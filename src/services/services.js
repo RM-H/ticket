@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-export const url = "https://ticket.metamax.network/api/v1"
-export const baseurl = "https://ticket.metamax.network"
-// export const Fetchdata = axios.get(url)
+export const url = "https://api.bilitim.net/api/v1"
+export const baseurl = "https://api.bilitim.net"
+
 export const SendSeats = async (d) => {
     let formdata = new FormData();
     formdata.append("ids", d)

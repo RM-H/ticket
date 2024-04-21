@@ -29,7 +29,7 @@ const Mainlayout = ({children}) => {
 
     return (
         <>
-            <div className='is-flex is-flex-direction-column is-align-items-center mx-auto' style={{width: '99vw'}}>
+            <div className='is-flex is-flex-direction-column is-align-items-center mx-auto'>
 
 
                 <div className='containerwidth '>

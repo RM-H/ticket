@@ -262,7 +262,7 @@ const Inquiry = () => {
                             پیگیری خرید
 
                         </h1>
-                        <div className='is-flex is-flex-direction-column flex-JCS-ACS cardboxborder p-3 shadowone'>
+                        <div className='is-flex is-flex-direction-column flex-JCS-ACS cardboxborder p-3 mt-4 shadowtwo'>
 
                             <Formik onSubmit={(values) => handleinquiry(values)} initialValues={{refid: ''}}
                                     validationSchema={Yup.object().shape({

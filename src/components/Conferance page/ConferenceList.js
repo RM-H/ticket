@@ -27,7 +27,7 @@ const ConferenceList = ({cityid, singerid}) => {
         const options = {
 
 
-            params: {page: page, take: 4,type:2, singer_id: singerid, city_id: cityid, search: search}
+            params: {page: page, take: 8,type:2, singer_id: singerid, city_id: cityid, search: search}
         };
         setLoading(true)
 
