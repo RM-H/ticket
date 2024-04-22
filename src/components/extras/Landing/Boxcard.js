@@ -38,7 +38,7 @@ const BoxCard = ({id, singer, time, location, statusCode, ts, image, city}) => {
         <>
 
             <motion.div animate={{opacity: 1, x: [-800, 0,], y: [-500,0], rotate: 360, scale: [2, 1]}}
-                        transition={{duration: 0.693}} className='column is-12-mobile is-6-tablet  is-5-desktop'
+                        transition={{duration: 0.693}} className='column is-12-mobile is-10-tablet  is-5-desktop'
                         variants={{
                             hidden: {scale: 0},
                             visible: {scale: 1, opacity: 1}

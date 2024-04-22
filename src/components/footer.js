@@ -83,6 +83,9 @@ const Footer = () => {
                                     status === "done" ? dataneeded.footer_black : '...'
                                 }
                             </article>
+
+
+
                             <a
                                 target="_blank"
                                 href="https://trustseal.enamad.ir/?id=483768&Code=AkTTB3TQGvPPj0ZfNEUgS6PjG3HYUUZs"
