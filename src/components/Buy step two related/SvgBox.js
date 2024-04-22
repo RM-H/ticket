@@ -100,7 +100,7 @@ const SvgBox = ({map, seatinfo, setItems, itemsselected}) => {
         <>
 
 
-            <div className='column is-12 cardboxborder svgheight shadowone  '>
+            <div className='column is-12 cardboxborder svgheight shadowtwo  '>
 
                 <TransformWrapper>
 

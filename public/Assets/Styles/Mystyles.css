@@ -723,7 +723,7 @@ body {
 
     .svgheight {
 
-        height: 15rem !important;
+        max-height: 35rem !important;
     }
 
     .navpadend150 {

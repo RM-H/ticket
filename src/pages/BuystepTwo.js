@@ -242,7 +242,7 @@ const BuystepTwo = () => {
                         </div>
 
 
-                        <div className='column is-12 cardboxborder shadowone'>
+                        <div className='column is-12 cardboxborder shadowtwo'>
                             <div className='columns m-0 is-align-items-center'>
                                 <div className='column is-10'>
 
