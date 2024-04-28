@@ -80,7 +80,7 @@ const ContactBoxOne = () => {
                                     شماره تماس
                                 </h3>
                                 <p className='mt-3'>
-                                    <a href="tel:۰۲۱۹۱۶۹۱۲۴۸" className='yekan is-size-5-desktop'>
+                                    <a href={`tel: ${phone}`} className='yekan is-size-5-desktop'>
 
 
                                         {
@@ -107,7 +107,8 @@ const ContactBoxOne = () => {
 
                                 <address className='yekan is-size-6-desktop mt-3' style={{fontStyle: 'normal'}}>
                                     {
-                                        address
+                                        <a className='has-text-black' href={`https://www.google.com/maps/@${dataneeded.lat},${dataneeded.lng},15z?entry=ttu}`} target='_blank'>{address}</a>
+
                                     }
                                 </address>
 
@@ -121,14 +122,16 @@ const ContactBoxOne = () => {
                                           className="has-text-white clrtwo p-1 ml-3 p-2 borderrad1 is-flex flex-JCS-ACS">
                                    <Share/>
                                          </span>
-                                    سوشیال مدیا
+                                   شبکه های اجتماعی
 
 
                                 </h3>
                                 <p className='mt-3 '>
-                                    <Telegram className='ml-2 scoialhover'/>
-                                    <Instagram className='mx-2 scoialhover'/>
-                                    <WhatsApp className='mx-2 scoialhover'/>
+                                    <a href={dataneeded.telegram}> <Telegram className='ml-2 scoialhover'/></a>
+                                    <a href={dataneeded.instagram}> <Instagram className='mx-2 scoialhover'/></a>
+                                    <a href={dataneeded.whatsapp}>  <WhatsApp className='mx-2 scoialhover'/></a>
+
+
 
 
                                 </p>

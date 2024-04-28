@@ -76,8 +76,9 @@ const Navbar = (props) => {
             <Typography onClick={() => {
                 nav('/');
                 handleActivePage(0)
+                handleDrawerToggle()
             }} className='pinar' variant="h6" sx={{my: 2}}>
-                بیلیتیم
+                خانه
             </Typography>
 
             <Divider sx={{my: 1}}/>
@@ -96,41 +97,41 @@ const Navbar = (props) => {
 
                 <ListItem onClick={handleDrawerToggle} disablePadding>
                     <ListItemButton selected={activePage === 1} onClick={() => {
-                        nav('/concerts');
+                        nav('/concerts/');
                         handleActivePage(1)
                     }}
                                     sx={{textAlign: 'center', height: '3rem'}}>
                         <Typography className='pinar' variant="h6" sx={{my: 2}}>
-                            کنسرت ها
+                            بلیت کنسرت
                         </Typography>
                     </ListItemButton>
                 </ListItem>
 
                 <ListItem onClick={handleDrawerToggle} disablePadding>
                     <ListItemButton selected={activePage === 2} onClick={() => {
-                        nav('/conference');
+                        nav('/conference/');
                         handleActivePage(2)
                     }}
                                     sx={{textAlign: 'center', height: '3rem'}}>
                         <Typography className='pinar' variant="h6" sx={{my: 2}}>
-                            همایش
+                            بلیت همایش
                         </Typography>
                     </ListItemButton>
                 </ListItem>
 
                 <ListItem onClick={handleDrawerToggle} disablePadding>
                     <ListItemButton selected={activePage === 3} onClick={() => {
-                        nav('/theatre');
+                        nav('/theatre/');
                         handleActivePage(3)
                     }} sx={{textAlign: 'center', height: '3rem'}}>
                         <Typography className='pinar' variant="h6" sx={{my: 2}}>
-                            تئاتر
+                            بلیت تئاتر
                         </Typography>
                     </ListItemButton>
                 </ListItem>
                 <ListItem onClick={handleDrawerToggle} disablePadding>
                     <ListItemButton selected={activePage === 4} onClick={() => {
-                        nav('/live');
+                        nav('/live/');
                         handleActivePage(4)
                     }} sx={{textAlign: 'center', height: '3rem'}}>
                         <Typography className='pinar' variant="h6" sx={{my: 2}}>
@@ -141,7 +142,7 @@ const Navbar = (props) => {
 
                 <ListItem onClick={handleDrawerToggle} disablePadding>
                     <ListItemButton selected={activePage === 5} onClick={() => {
-                        nav('/inquiry');
+                        nav('/inquiry/');
                         handleActivePage(5)
                     }} sx={{textAlign: 'center', height: '3rem'}}>
                         <Typography className='pinar' variant="h6" sx={{my: 2}}>
@@ -152,7 +153,7 @@ const Navbar = (props) => {
 
                 <ListItem onClick={handleDrawerToggle} disablePadding>
                     <ListItemButton selected={activePage === 6} onClick={() => {
-                        nav('/contact');
+                        nav('/contact/');
                         handleActivePage(6)
                     }} sx={{textAlign: 'center', height: '3rem'}}>
                         <Typography className='pinar' variant="h6" sx={{my: 2}}>
@@ -247,7 +248,7 @@ const Navbar = (props) => {
 
 
 
-                                <Link to={'/'} title='خرید بلیط کنسرت' onClick={() => {
+                                <Link to={'/'} title='خرید بلیت کنسرت، همایش و تئاتر' onClick={() => {
 
                                     handleActivePage(0)
                                 }}
@@ -276,36 +277,37 @@ const Navbar = (props) => {
 
 
                                 <div className='is-flex is-flex-direction-row is-hidden-touch '>
-                                    <Link title='خرید جدیدترین بلیط های کنسرت بصورت آنلاین' to={'/concerts'} onClick={() => {
+                                    <Link title='خرید آنلاین بلیت کنسرت' to={'/concerts/'} onClick={() => {
 
                                         handleActivePage(1)
                                     }
                                     }
                                        className={`navbar-item  underline ${activePage === 1 && 'navactive'}`}>
                                         <MusicNoteOutlined/>
-                                        کنسرت
+                                        بلیت کنسرت
                                     </Link>
-                                    <Link title='لیست جدیدترین کنفرانس هایی که بزودی برگزار خواهد شد' to={'/conference'} onClick={() => {
+                                    <Link title='خرید آنلاین بلیت همایش' to={'/conference/'} onClick={() => {
 
                                         handleActivePage(2)
                                     }
                                     }
                                        className={`navbar-item  underline ${activePage === 2 && 'navactive'}`}>
                                         <EventSeatOutlined/>
-                                        همایش
+                                        بلیت همایش
                                     </Link>
-                                    <Link title='تئاتر از همه رنگ' to={'/theatre'} onClick={() => {
+                                    <Link title='خرید آنلاین بلیت تئاتر' to={'/theatre/'} onClick={() => {
 
                                         handleActivePage(3)
                                     }
                                     }
                                        className={`navbar-item  underline ${activePage === 3 && 'navactive'}`}>
                                         <TheaterComedyOutlined/>
-                                        تئاتر
+                                        بلیت تئاتر
                                     </Link>
 
 
-                                    <Link title='آرشیو ویدویی غنی از برنامه هایی که برگزار شده اند.' to={'/live'} onClick={() => {
+                                    <Link title='آرشیو ویدئویی برنامه های سایت بیلیتیم
+                                    ' to={'/live/'} onClick={() => {
 
                                         handleActivePage(4)
                                     }}
@@ -315,7 +317,7 @@ const Navbar = (props) => {
                                     </Link>
 
 
-                                    <Link title='پیگیری خرید بلیط با کد رهگیری' to={'/inquiry'} onClick={() => {
+                                    <Link title='پیگیری خرید بلیط با کد رهگیری' to={'/inquiry/'} onClick={() => {
 
                                         handleActivePage(5)
                                     }}
@@ -325,14 +327,14 @@ const Navbar = (props) => {
                                     </Link>
 
 
-                                    <Link title='همکاران ما در واحد پشتیبانی هر 7 روز هفته و بصورت 24 ساعته آماده پاسخگویی به سوالات شما هستند' to={'/contact'} onClick={() => {
+                                    {/*<Link title='همکاران ما در واحد پشتیبانی هر 7 روز هفته و بصورت 24 ساعته آماده پاسخگویی به سوالات شما هستند' to={'/contact/'} onClick={() => {*/}
 
-                                        handleActivePage(6)
-                                    }}
-                                       className={`navbar-item  underline ${activePage === 6 && 'navactive'}`}>
-                                        <ContactlessOutlined/>
-                                        ارتباط با ما
-                                    </Link>
+                                    {/*    handleActivePage(6)*/}
+                                    {/*}}*/}
+                                    {/*   className={`navbar-item  underline ${activePage === 6 && 'navactive'}`}>*/}
+                                    {/*    <ContactlessOutlined/>*/}
+                                    {/*    ارتباط با ما*/}
+                                    {/*</Link>*/}
 
 
                                 </div>

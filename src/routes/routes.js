@@ -8,7 +8,7 @@ import {
 
 } from "react-router-dom";
 
-import {LogIn,BuystepOne ,BuystepTwo,Errorpage,Contact,Live,Dashboard,Concerts,Results,Confrences,Theatre , Inquiry,Print,LiveVideo} from '../components'
+import {LogIn,BuystepOne ,BuystepTwo,Errorpage,Contact,Live,Dashboard,Concerts,Results,Confrences,Theatre , Inquiry,Print,LiveVideo,TicketBuyRules} from '../components'
 
 
 export const router = createBrowserRouter([
@@ -39,18 +39,18 @@ export const router = createBrowserRouter([
 
 
             {
-                path: '/contact' ,
+                path: '/contact/' ,
                 element: <Contact/>
 
             },
 
             {
-                path: '/concerts' ,
+                path: '/concerts/' ,
                 element: <Concerts />
 
             },
             {
-                path: '/conference' ,
+                path: '/conference/' ,
                 element: <Confrences />
 
             },
@@ -60,15 +60,20 @@ export const router = createBrowserRouter([
 
             },
             {
-                path: '/inquiry' ,
+                path: '/inquiry/' ,
                 element: <Inquiry />
 
             },
 
 
             {
-                path: '/live' ,
+                path: '/live/' ,
                 element: <Live />
+
+            },
+            {
+                path: '/rules' ,
+                element: <TicketBuyRules />
 
             },
 

@@ -47,7 +47,7 @@ const NavbarDropDown = () => {
         Selectedcity=
             <>
 
-                همه شهر ها       <ArrowDropDown />
+                 شهر ها       <ArrowDropDown />
             </>
     }
 
@@ -74,7 +74,7 @@ const NavbarDropDown = () => {
                             window.location.reload()
                         }}
                                 className="button noborder wdith100 clrseven pinar is-block navbardropwdownhover has-text-white">
-                            همه شهر ها
+                             شهر ها
 
                         </button>
 

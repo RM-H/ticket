@@ -35,7 +35,7 @@ const NavbarSearch = () => {
 
                                 <Field className='input yekan wdith100 has-text-centered p-0 clrseven has-text-white noborder '
                                        id="query" name="query"
-                                       placeholder=" چیزی بنویسید" type='text' style={{borderRadius:0 }}/>
+                                       placeholder=" جستجو" type='text' style={{borderRadius:0 }}/>
 
 
                                 <button type='submit'

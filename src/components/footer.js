@@ -125,15 +125,15 @@ const Footer = () => {
                             <h5 className='pinar has-text-weight-bold is-size-5 has-text-white mb-3'>خریـد بلیط</h5>
                             <aside className='menu'>
                                 <ul className=" yekan ">
-                                    <li className='my-2'><Link to={'/concerts'}
+                                    <li className='my-2'><Link to={'/concerts/'}
                                               className='clrsixtext footerhover '><MusicNote/> کنسرت</Link></li>
-                                    <li className='my-2'><Link to={'/conference'}
+                                    <li className='my-2'><Link to={'/conference/'}
                                               className='clrsixtext footerhover '><NestCamWiredStand/> همایش</Link>
                                     </li>
-                                    <li className='my-2'><Link to={'/theatre'}
+                                    <li className='my-2'><Link to={'/theatre/'}
                                               className='clrsixtext footerhover '><TheaterComedy/> تئاتــر</Link>
                                     </li>
-                                    <li className='my-2'><Link to={'/live'}
+                                    <li className='my-2'><Link to={'/live/'}
                                               className='clrsixtext footerhover '><CalendarMonthOutlined/> آرشیو ویدیوها</Link>
                                     </li>
                                 </ul>
@@ -165,13 +165,16 @@ const Footer = () => {
                             <aside className='menu'>
                                 <ul className=" yekan ">
                                     <li><a className='clrsixtext footerhover'> <Phone/>
+
                                         {
-                                            status === "done" ? dataneeded.phone : '...'
+                                            status === "done" ? <a className='clrsixtext footerhover' href={`tel: ${dataneeded.phone}`}>{dataneeded.phone}</a> : '...'
                                         }
                                     </a></li>
                                     <li><a className='clrsixtext footerhover is-size-6'><LocationOn/>
+
+
                                         {
-                                            status === 'done' ? dataneeded.address : '...'
+                                            status === 'done' ?  <a className='clrsixtext' href={`https://www.google.com/maps/@${dataneeded.lat},${dataneeded.lng},15z?entry=ttu}`} target='_blank'>{dataneeded.address}</a> : '...'
                                         }
 
                                     </a></li>

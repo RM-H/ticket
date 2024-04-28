@@ -6,6 +6,7 @@ import {getSansinfobyID,baseurl} from '../services/services'
 
 
 import {useEffect, useState} from 'react'
+import {Link} from 'react-router-dom'
 
 
 const BuystepOne = () => {
@@ -109,7 +110,27 @@ const BuystepOne = () => {
                 <section>
                     <div className='columns mb-6 mx-0 is-multiline navpadend150 navpadstart150'>
 
-                        <TicketBuyRules law={readlaw} setlaw={setreadlaw}/>
+
+
+                        <div className='column pinar is-12 mt-6'>
+
+                            <p>
+
+                                <input className='ml-2' type="checkbox" onClick={()=>setreadlaw(!readlaw)}/>
+                                <span className='clrtwotext' onClick={()=>window.open('/rules' ,"100","width=430,height=932")}>
+                                    قوانین و مقررات
+                                </span>
+                                {' '}
+
+
+
+                                را خوانده و قبول میکنم.
+
+                            </p>
+
+
+                        </div>
+
 
                         <div className='column is-12'>
                             <div className='columns is-multiline'>

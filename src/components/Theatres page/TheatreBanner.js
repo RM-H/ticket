@@ -6,7 +6,7 @@ const TheatreBanner = () => {
     return (
         <>
             <div className="my-3 px-6 column is-12 is-flex is-align-items-center concertsheight" style={{
-                backgroundImage: 'url(./images/theathre.png)',
+                backgroundImage: 'url(/images/theathre.png)',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat'
 

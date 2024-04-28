@@ -5,7 +5,7 @@ const ConferanceBanner = () => {
     const nav = useNavigate()
   return (
       <>
-          <div className="my-3 px-6 column is-12 is-flex is-align-items-center concertsheight" style={{backgroundImage:'url(./images/conference.png)' , backgroundSize:'cover' , backgroundRepeat:'no-repeat'}}>
+          <div className="my-3 px-6 column is-12 is-flex is-align-items-center concertsheight" style={{backgroundImage:'url(/images/conference.png)' , backgroundSize:'cover' , backgroundRepeat:'no-repeat'}}>
 
               <div className="pinar has-text-weight-bold is-hidden-mobile">
                   <img alt='icon' src={icon} style={{transform:'translateX(2rem) translateY(1rem)'}}/>

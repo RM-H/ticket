@@ -34,7 +34,7 @@ export {default as LogIn} from '../pages/LogIn'
 export {default as BuystepOne} from '../pages/BuystepOne'
 export {default as BuyOneBoxOne} from '../components/Buy step one related/BuysteponeBoxOne'
 export {default as Map} from '../components/Buy step one related/Showmap'
-export {default as TicketBuyRules} from '../components/Buy step one related/BuyRules'
+export {default as TicketBuyRules} from '../pages/BuyRules'
 export {default as TicketTimecard} from './Buy step one related/TicketScheduleCard'
 
 
