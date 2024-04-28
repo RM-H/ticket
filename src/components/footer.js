@@ -1,5 +1,5 @@
 import {AnimatedType} from '../components'
-import bg1 from '../wallpaper/coupon1.png'
+
 import {
     TheaterComedy,
     NestCamWiredStand,
@@ -54,9 +54,9 @@ const Footer = () => {
 
                                 </div>
 
-                                <div className='column is-hidden-touch is-4-desktop' style={{height: '15rem'}}>
-                                    <img draggable={false} src={bg1} alt="coupon"
-                                         style={{transform: 'translateY(-7rem) translateX(-3rem)'}}/>
+                                <div className='column is-hidden-touch is-4-desktop' style={{height: '14rem'}}>
+                                    <img draggable={false} src='/images/logo-vertical.svg' alt="coupon"
+                                         style={{transform: 'translateY(-5rem) '}}/>
 
 
                                 </div>
@@ -86,34 +86,55 @@ const Footer = () => {
 
 
 
-                            <a
-                                target="_blank"
-                                href="https://trustseal.enamad.ir/?id=483768&Code=AkTTB3TQGvPPj0ZfNEUgS6PjG3HYUUZs"
-                            >
-                                <img
-                                    referrerPolicy="origin"
-                                    src="https://trustseal.enamad.ir/Content/Images/Star2/81.png?v=5.0.0.3777"
-                                    alt=""
-                                    style={{ cursor: "pointer" , backgroundColor:'white' , borderRadius:'0.3rem'  }}
-                                    code="AkTTB3TQGvPPj0ZfNEUgS6PjG3HYUUZs"
-                                />
-                            </a>
+
+                            {/*footer images*/}
+                         <div className='is-flex is-justify-content-flex-start'>
+
+                             <a
+                                 target="_blank"
+                                 href="https://trustseal.enamad.ir/?id=483768&Code=AkTTB3TQGvPPj0ZfNEUgS6PjG3HYUUZs"
+                                 style={{ width:'50%' , marginTop:'0.5rem'}}
+                             >
+                                 <img
+                                     referrerPolicy="origin"
+                                     src="https://trustseal.enamad.ir/Content/Images/Star2/81.png?v=5.0.0.3777"
+                                     alt=""
+                                     style={{ cursor: "pointer" , backgroundColor:'white' , borderRadius:'0.3rem'   }}
+                                     code="AkTTB3TQGvPPj0ZfNEUgS6PjG3HYUUZs"
+                                 />
+                             </a>
+
+                             <img
+
+                                 src="/images/logo-vertical.svg"
+                                 alt=""
+                                 className='is-hidden-desktop'
+                                 style={{  borderRadius:'0.3rem' , width:'40%'  }}
+
+                             />
+
+
+                         </div>
+
+
+
+
                         </div>
 
                         <div className='column is-6-mobile is-2-desktop '>
                             <h5 className='pinar has-text-weight-bold is-size-5 has-text-white mb-3'>خریـد بلیط</h5>
                             <aside className='menu'>
                                 <ul className=" yekan ">
-                                    <li><Link to={'/concerts'}
-                                              className='clrsixtext footerhover my-1'><MusicNote/> کنسرت</Link></li>
-                                    <li><Link to={'/conference'}
-                                              className='clrsixtext footerhover my-1'><NestCamWiredStand/> همایش</Link>
+                                    <li className='my-2'><Link to={'/concerts'}
+                                              className='clrsixtext footerhover '><MusicNote/> کنسرت</Link></li>
+                                    <li className='my-2'><Link to={'/conference'}
+                                              className='clrsixtext footerhover '><NestCamWiredStand/> همایش</Link>
                                     </li>
-                                    <li><Link to={'/theatre'}
-                                              className='clrsixtext footerhover my-1'><TheaterComedy/> تئاتــر</Link>
+                                    <li className='my-2'><Link to={'/theatre'}
+                                              className='clrsixtext footerhover '><TheaterComedy/> تئاتــر</Link>
                                     </li>
-                                    <li><Link to={'/live'}
-                                              className='clrsixtext footerhover my-1'><CalendarMonthOutlined/> آرشیو ویدیوها</Link>
+                                    <li className='my-2'><Link to={'/live'}
+                                              className='clrsixtext footerhover '><CalendarMonthOutlined/> آرشیو ویدیوها</Link>
                                     </li>
                                 </ul>
 
@@ -125,10 +146,10 @@ const Footer = () => {
 
                             <aside className='menu'>
                                 <ul className=" yekan ">
-                                    <li><Link to={'/inquiry'} className='clrsixtext footerhover my-1 '> پیگیری
+                                    <li className='my-4'><Link to={'/inquiry'} className='clrsixtext footerhover my-1 '> پیگیری
                                         خرید</Link></li>
 
-                                    <li><Link to={'/contact'} className='clrsixtext footerhover my-1 '>
+                                    <li className='my-4'><Link to={'/contact'} className='clrsixtext footerhover my-1 '>
                                        ارتباط با ما
                                     </Link></li>
 

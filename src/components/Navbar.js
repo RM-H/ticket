@@ -25,7 +25,7 @@ import {userinfoSelector} from "../Slices/userSlice";
 import {NavDropDown, Navsearch} from './index'
 
 
-import {useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 
 const Navbar = (props) => {
@@ -239,7 +239,7 @@ const Navbar = (props) => {
                                 >
                                     <Menu/>
                                     {/*responsive logo*/}
-                                    <img className='mr-1' src="/images/headlogo.png" width={40} height={30}  alt=""/>
+                                    <img className='mr-1' src="/images/head-logo.svg" width={40} height={30}  alt=""/>
                                 </IconButton>
 
 
@@ -247,17 +247,17 @@ const Navbar = (props) => {
 
 
 
-                                <a onClick={() => {
-                                    nav('/');
+                                <Link to={'/'} title='خرید بلیط کنسرت' onClick={() => {
+
                                     handleActivePage(0)
                                 }}
                                    className={`navbar-item is-hidden-mobile is-hidden-touch underline px-0 ${activePage === 0 && 'navactive'}`}
                                    style={{alignItems: 'center'}}>
-                                    <img src="/images/logo.png" width={150} height={50} style={{maxHeight: '55px'}}/>
+                                    <img src="/images/logo.svg" width={150} height={50} style={{maxHeight: '55px'}}/>
 
 
                                     {/*بیلیتیم*/}
-                                </a>
+                                </Link>
                                 <div className='is-hidden-desktop  is-flex is-align-items-center is-justify-content-flex-end-flex-end mr-auto ml-0 '>
                                     <NavDropDown/>
                                     <Navsearch/>
@@ -276,63 +276,63 @@ const Navbar = (props) => {
 
 
                                 <div className='is-flex is-flex-direction-row is-hidden-touch '>
-                                    <a onClick={() => {
-                                        nav('/concerts');
+                                    <Link title='خرید جدیدترین بلیط های کنسرت بصورت آنلاین' to={'/concerts'} onClick={() => {
+
                                         handleActivePage(1)
                                     }
                                     }
                                        className={`navbar-item  underline ${activePage === 1 && 'navactive'}`}>
                                         <MusicNoteOutlined/>
                                         کنسرت
-                                    </a>
-                                    <a onClick={() => {
-                                        nav('/conference');
+                                    </Link>
+                                    <Link title='لیست جدیدترین کنفرانس هایی که بزودی برگزار خواهد شد' to={'/conference'} onClick={() => {
+
                                         handleActivePage(2)
                                     }
                                     }
                                        className={`navbar-item  underline ${activePage === 2 && 'navactive'}`}>
                                         <EventSeatOutlined/>
                                         همایش
-                                    </a>
-                                    <a onClick={() => {
-                                        nav('/theatre');
+                                    </Link>
+                                    <Link title='تئاتر از همه رنگ' to={'/theatre'} onClick={() => {
+
                                         handleActivePage(3)
                                     }
                                     }
                                        className={`navbar-item  underline ${activePage === 3 && 'navactive'}`}>
                                         <TheaterComedyOutlined/>
                                         تئاتر
-                                    </a>
+                                    </Link>
 
 
-                                    <a onClick={() => {
-                                        nav('/live');
+                                    <Link title='آرشیو ویدویی غنی از برنامه هایی که برگزار شده اند.' to={'/live'} onClick={() => {
+
                                         handleActivePage(4)
                                     }}
                                        className={`navbar-item  underline ${activePage === 4 && 'navactive'}`}>
                                         <ArchiveOutlined/>
                                         آرشیو ویدیویی
-                                    </a>
+                                    </Link>
 
 
-                                    <a onClick={() => {
-                                        nav('/inquiry');
+                                    <Link title='پیگیری خرید بلیط با کد رهگیری' to={'/inquiry'} onClick={() => {
+
                                         handleActivePage(5)
                                     }}
                                        className={`navbar-item  underline ${activePage === 5 && 'navactive'}`}>
                                         <ManageSearchOutlined/>
                                         پیگیری خرید
-                                    </a>
+                                    </Link>
 
 
-                                    <a onClick={() => {
-                                        nav('/contact');
+                                    <Link title='همکاران ما در واحد پشتیبانی هر 7 روز هفته و بصورت 24 ساعته آماده پاسخگویی به سوالات شما هستند' to={'/contact'} onClick={() => {
+
                                         handleActivePage(6)
                                     }}
                                        className={`navbar-item  underline ${activePage === 6 && 'navactive'}`}>
                                         <ContactlessOutlined/>
                                         ارتباط با ما
-                                    </a>
+                                    </Link>
 
 
                                 </div>
