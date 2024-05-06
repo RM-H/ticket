@@ -77,7 +77,7 @@ const Footer = () => {
                     <div className='columns is-flex  is-multiline m-0   navpadend150 navpadstart150 '>
 
                         <div className='column is-12-mobile is-4-desktop'>
-                            <h5 className='pinar has-text-weight-bold is-size-5 has-text-white mb-3'>تیکت آنلاین</h5>
+                            <h5 className='pinar has-text-weight-bold is-size-5 has-text-white mb-3'>بیلیتیم</h5>
                             <article className='yekan has-text-white is-size-6 mb-1' style={{textAlign: "justify"}}>
                                 {
                                     status === "done" ? dataneeded.footer_black : '...'
@@ -146,10 +146,10 @@ const Footer = () => {
 
                             <aside className='menu'>
                                 <ul className=" yekan ">
-                                    <li className='my-4'><Link to={'/inquiry'} className='clrsixtext footerhover my-1 '> پیگیری
+                                    <li className='my-4'><Link to={'/inquiry/'} className='clrsixtext footerhover my-1 '> پیگیری
                                         خرید</Link></li>
 
-                                    <li className='my-4'><Link to={'/contact'} className='clrsixtext footerhover my-1 '>
+                                    <li className='my-4'><Link to={'/contact/'} className='clrsixtext footerhover my-1 '>
                                        ارتباط با ما
                                     </Link></li>
 
@@ -192,24 +192,8 @@ const Footer = () => {
                                 متعلق
 
 
-                                به بیلیتیم می باشد
-                                <Tooltip title='
+                                به بیلیتیم می باشد.
 
-
-                            < Coded By : Ramin Hasani />
-
-
-
-
-
-
-                            '
-                                >
-
-                                        .
-
-
-                                </Tooltip>
                             </p>
 
                             <div className='is-inline-block has-text-centered-mobile has-text-white' style={{float: 'left'}}>
